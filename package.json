@@ -1,0 +1,23 @@
+{
+  "name": "github-copilot-hans",
+  "version": "0.1.0",
+  "description": "GitHub Copilot 桌面版中文汉化工具（CDP 动态注入，不修改安装文件）",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "copilot-hans": "src/cli.mjs"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs start",
+    "stop": "node src/cli.mjs stop",
+    "status": "node src/cli.mjs status",
+    "dump": "node src/cli.mjs dump",
+    "extract": "node tools/extract-assets.mjs && node tools/extract-strings.mjs",
+    "merge": "node tools/merge-batch.mjs",
+    "test": "node tools/selftest.mjs"
+  }
+}
